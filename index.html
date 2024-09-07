@@ -26,24 +26,32 @@
 
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<div class="text-center">
-	<h2>FunAudioLLM: Voice Understanding and Generation Foundation Models for Natural Interaction Between Humans and LLMs </h2>
+	<h2>Takin: A Cohort of Superior Quality Zero-shot Speech Generation Models </h2>
 
       [<a href="https://arxiv.org/abs/2407.04051">Paper</a>]
 		[<a href="https://github.com/FunAudioLLM">Code</a>]
-		[Modelscope:<a href="https://www.modelscope.cn/studios/iic/SenseVoice">SenseVoice</a> <a href="https://www.modelscope.cn/studios/iic/CosyVoice-300M">CosyVoice</a>]
-		[HuggingFace: <a href="https://huggingface.co/FunAudioLLM/SenseVoiceSmall">SenseVoice</a> CosyVoice]
+		<!-- [Modelscope:<a href="https://www.modelscope.cn/studios/iic/SenseVoice">SenseVoice</a> <a href="https://www.modelscope.cn/studios/iic/CosyVoice-300M">CosyVoice</a>]
+		[HuggingFace: <a href="https://huggingface.co/FunAudioLLM/SenseVoiceSmall">SenseVoice</a> CosyVoice] -->
         <p class="fst-italic mb-0">
 			<br>
-			Tongyi SpeechTeam
+			<b>Everest Team</b>
 		<p></p>
         </p>
-        <p><b>Alibaba Group</b></p>
+        <p>Ximalaya Inc.</p>
 	</div>
 	<p><b>Abstract:</b>
 <!--		We introduce FunAudioLLM, ....-->
-		This report introduces <b>FunAudioLLM</b>, a framework designed to enhance natural voice interactions between humans and large language models (LLMs). At its core are two innovative models: <b>SenseVoice</b> for high-precision multilingual speech recognition, emotion recognition, and audio event detection; and <b>CosyVoice</b> for natural speech generation with multi-language, timbre, and emotion control. SenseVoice delivers exceptionally low latency and supports over 50 languages, while CosyVoice excels in multi-lingual voice generation, zero-shot voice generation, cross-lingual voice cloning, and instruction-following capabilities. The models related to SenseVoice and CosyVoice have been open-sourced on Modelscope and Huggingface, along with the corresponding training, inference, and fine-tuning codes released on GitHub. By integrating these models with LLMs, FunAudioLLM enables applications such as speech translation, emotional voice chat, interactive podcasts, and expressive audiobook narration, thereby pushing the boundaries of voice interaction technology.
+	This report introduces <b>Takin AudioLLM</b>, a toolkit designed to enhance the production quality and efficiency in audiobook production and other AIGC scenarios. 
+	Its core comprises three innovative models: <b>Takin TTS</b>, <b>Takin VC</b>, and <b>Takin Morphing</b>. 
+	Takin TTS is primarily used for generating highly expressive audio content, with control over tone and emotion; 
+	Takin VC focuses on timbre conversion of real human data, complementing the TTS content production ecosystem. 
+	Takin TTS and Takin VC excel in zero-shot voice generation, cross-language voice cloning, and instruction following. 
+	Takin Morphing is mainly used for voice style transfer, enriching the diversity of voice content generation to meet the diverse needs of customers. 
+	These models incorporate the latest LLMs technology in the industry, achieving significant improvements over the previous generation of voice content production. 
+	We deeply integrate our self-developed capabilities into fields such as audiobook production, podcast interaction, and virtual avatar customization, 
+	advancing the practical application of audio large language models.
 	<p style="text-align: center;">
-		<img src="pics/highlight.png" height="480" width="1280">
+		<img src="pics/takin-tts-emo.png" height="480" width="1280">
 	</p>
 <!--
 		<li> SenseVoice supports high-precision multilingual ASR, excels over Whisper in Chinese and Cantonese recognition, and has SOTA emotion recognition capabilities. </li>
@@ -53,7 +61,7 @@
 		<li> CosyVoice-instruct also offers emotional expression, event control, and detailed adjustments like speed and pitch, and it ensures versatile and nuanced speech generation.</li>
 		<li> FunAudioLLM has developed a variety of application demos, including simultaneous interpretation, emotional voice interaction, interactive podcasts, and multi-character audiobook narration.</li>
 -->
-</p>
+<!-- </p>
 	</p>
 
 	<p>
@@ -89,13 +97,13 @@
 			</ul>
 		</li>
 	</p>
-</div>
+</div> -->
 
 
 
 <!------ Application -------------------------->
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h2 id="App-S2ST" style="text-align: center;">Speech-to-Speech Translation</h2>
+	<h2 id="App-S2ST" style="text-align: center;">Text-to-Speech Generation</h2>
 		<p>By integrating SenseVoice, LLMs, and CosyVoice, we can effortlessly perform speech-to-speech translation (S2ST). Note that the original recordings are highlighted in bold.
 	</p>
 	<p style="text-align: center;">
@@ -105,56 +113,58 @@
 			<table class="table table-hover pt-2">
 				<thead>
 				<tr>
-					<th style="vertical-align : middle;text-align: center">ZH </th>
-					<th style="vertical-align : middle;text-align: center">EN </th>
-					<th style="vertical-align : middle;text-align: center">JP </th>
-					<th style="vertical-align : middle;text-align: center">Yue </th>
-					<th style="vertical-align : middle;text-align: center">KO </th>
+					<th colspan="2" style="vertical-align : middle;text-align: center">利用Takin-TTS生产的合成内容 （Synthetic content produced using Takin-TTS）</th>
+					<th style="vertical-align : middle;text-align: center"> </th>
 				</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/zh/zh_prompt.wav" autoplay/>Your browser does not support the audio element.</audio><br><b>对，所以说你现在的话，这个账单的话，你既然说能处理，那你就想办法处理掉。</b></td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/zh/zh_en.wav" autoplay/>Your browser does not support the audio element.</audio><br> Yes, that's why I'm saying, regarding the bill you're currently discussing, if you say you can handle it, then find a way to take care of it. </td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/zh/zh_jp.wav" autoplay/>Your browser does not support the audio element.</audio><br>そう、だから今あなたが言っていること、この請求書について、あなたが処理できると言ったのなら、何とかして処理してください。</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/zh/zh_yue.wav" autoplay/>Your browser does not support the audio element.</audio><br>对，所以话你而家讲嘅，呢张账单嘅话，你既然话得掂，噉你就要想办法搞掂佢。</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/zh/zh_ko.wav" autoplay/>Your browser does not support the audio element.</audio><br>맞아, 그래서 네가 지금 말하는 것, 이 계산서에 대해서, 네가 처리할 수 있다고 했다면, 그렇다면 방법을 찾아서 처리해야 해.</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 500px;"><source src="audios/duobo_yinxiao/TTS-后期-绸缎 (1).mp3" autoplay/>Your browser does not support the audio element.</audio><br> 哎哟，这位客官，您的眼光可真是独到啊！哈哈哈哈，小店这匹锦缎可是苏州最顶尖的织工亲手打造，每一丝每一缕都透着精致，这样的宝物，被您一下子就瞧上了，真是慧眼识珠啊！我敢说，只有像您这样眼光绝顶的客官，才能把这锦缎的美展现得淋漓尽致！</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 500px;"><source src="audios/duobo_yinxiao/TTS 30s-5 (1).mp3" autoplay/>Your browser does not support the audio element.</audio><br> 父亲：你这个混蛋，我们会让你付出代价的！ 反派：你们以为这样就能打击到我？不过是做生意罢了，我还会在乎这个吗？ 母亲：生意？你说的是我们的孩子，是我们的心肝宝贝！求求你告诉我们孩子在哪！ 父亲：你这个畜生，根本不配做人！你知道我们为了找到孩子付出了多少吗？ 反派：哼，怪我吗？是你们自己没管好小孩，也不找找自己的原因。 </td>
 					</tr>
 					<tr>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/en/en_zh.wav" autoplay/>Your browser does not support the audio element.</audio><br>在那之后，完全收购那家公司。因此，保持管理层的一致性，利益与即将加入家族的资产保持一致，这就是我们有时不买下全部的原因。</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/en/en_prompt.wav" autoplay/>Your browser does not support the audio element.</audio><br><b>And then later on, fully acquiring that company. So keeping management in line, interest in line with the asset that's coming into the family is a reason why sometimes we don't buy the whole thing.</b></td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/en/en_jp.wav" autoplay/>Your browser does not support the audio element.</audio><br>その後、その会社を完全に買収する。だから、経営陣を一列に並べ、家族に入る資産との利益を一致させることが、私たちが全てを買わない理由の一つです。</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/en/en_yue.wav" autoplay/>Your browser does not support the audio element.</audio><br>之后，就完全收购咗嗰间公司。所以，保持管理层同兴趣与即将加入家族嘅资产保持一致，系我们有时唔买晒全部嘅原因。</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/en/en_ko.wav" autoplay/>Your browser does not support the audio element.</audio><br>그리고 나중에, 그 회사를 완전히 인수하게 됩니다. 그래서 경영진을 일치시키고, 가족에 들어오는 자산과의 이익을 일치시키는 것이 우리가 가끔 전부를 사지 않는 이유입니다.</td>
+						<th colspan="2" style="vertical-align : middle;text-align: center">单播多风格 （Synthetic content produced using Takin-TTS）</th>
+						<th style="vertical-align : middle;text-align: center"> </th>
 					</tr>
 					<tr>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/jp/jp_zh.wav" autoplay/>Your browser does not support the audio element.</audio><br>只是雨滴有什么麻烦的？这还没有打雷呢！</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/jp/jp_en.wav" autoplay/>Your browser does not support the audio element.</audio><br>Rainfall alone does not constitute a storm. Thunder is required.</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/jp/jp_prompt.wav" autoplay/>Your browser does not support the audio element.</audio><br><b>雨なんて大したことありません。まだ雷も鳴っていないのですから。</b></td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/jp/jp_yue.wav" autoplay/>Your browser does not support the audio element.</audio><br>只系雨滴有咩麻烦嘅？连打雷都未有呢！</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/jp/jp_ko.wav" autoplay/>Your browser does not support the audio element.</audio><br>고작 빗방울로 호들갑은, 아직 번개도 치지 않았는데.</td>
+						<td colspan="2" style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 1000px;"><source src="audios/danbo_duofengge/悬疑_喜千辉.mp3" autoplay/>Your browser does not support the audio element.</audio><br> 哎哟，这位客官，您的眼光可真是独到啊！哈哈哈哈，小店这匹锦缎可是苏州最顶尖的织工亲手打造，每一丝每一缕都透着精致，这样的宝物，被您一下子就瞧上了，真是慧眼识珠啊！我敢说，只有像您这样眼光绝顶的客官，才能把这锦缎的美展现得淋漓尽致！</td>
 					</tr>
 					<tr>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/yue/yue_zh.wav" autoplay/>Your browser does not support the audio element.</audio><br>早点回家吧，到家了如果可以的话给我回个信息。</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/yue/yue_en.wav" autoplay/>Your browser does not support the audio element.</audio><br>Come home early, and if possible, let me know when you're back.</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/yue/yue_jp.wav" autoplay/>Your browser does not support the audio element.</audio><br>早く家に帰って、家に着いたら可能なら私にメッセージを返してください。</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/yue/yue_prompt.wav" autoplay/>Your browser does not support the audio element.</audio><br><b>早啲翻屋企吧，到屋企可以嘅话俾我回个信息。</b></td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/yue/yue_ko.wav" autoplay/>Your browser does not support the audio element.</audio><br>일찍 집에 돌아오세요. 집에 도착하면 가능하다면 저에게 연락해 주세요.</td>
-					</tr>
-					<tr>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/ko/ko_zh.wav" autoplay/>Your browser does not support the audio element.</audio><br>虽然这种时候已经错过了云先生的戏，但夜晚的璃月仍有许多好去处。</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/ko/ko_en.wav" autoplay/>Your browser does not support the audio element.</audio><br>By this time of night, we will have already missed Yun's play. But LeeYew is full of interesting places to explore, even at night.</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/ko/ko_jp.wav" autoplay/>Your browser does not support the audio element.</audio><br>もう雲殿の芝居に間に合わないが、夜の璃月はまだまだいいところがたくさんあるぞ。</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/ko/ko_yue.wav" autoplay/>Your browser does not support the audio element.</audio><br>虽然呢个时候已经错过咗云先生嘅戏，但夜晚嘅璃月仲有好多好去处。</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/s2st/ko/ko_prompt.wav" autoplay/>Your browser does not support the audio element.</audio><br><b>어디가서 눈을 피하지. 난 괜찮은데, 넌 감기 걸릴지도 모르니.</b></td>
+						<td colspan="2" style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 1000px;"><source src="audios/danbo_duofengge/1-1睡眠之夜v1.3版本.mp3" autoplay/>Your browser does not support the audio element.</audio><br> 哎哟，这位客官，您的眼光可真是独到啊！哈哈哈哈，小店这匹锦缎可是苏州最顶尖的织工亲手打造，每一丝每一缕都透着精致，这样的宝物，被您一下子就瞧上了，真是慧眼识珠啊！我敢说，只有像您这样眼光绝顶的客官，才能把这锦缎的美展现得淋漓尽致！</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
 </div>
 
+<!------ Application -------------------------->
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h2 id="App-E-chat" style="text-align: center;">Emotional VoiceChat</h2>
+	<h2 id="App-S2ST" style="text-align: center;">Effect of Continual Supervised Finetuning</h2>
+		<p>By integrating SenseVoice, LLMs, and CosyVoice, we can effortlessly perform speech-to-speech translation (S2ST). Note that the original recordings are highlighted in bold.
+	</p>
+	<p style="text-align: center;">
+		<img src="pics/S2ST.png" height="368" width="1600">
+	</p>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+				<thead>
+				<tr>
+					<th colspan="2" style="vertical-align : middle;text-align: center">利用Takin-TTS生产的合成内容 （Synthetic content produced using Takin-TTS）</th>
+					<th style="vertical-align : middle;text-align: center"> </th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 500px;"><source src="audios/duobo_yinxiao/TTS-后期-绸缎 (1).mp3" autoplay/>Your browser does not support the audio element.</audio><br> 哎哟，这位客官，您的眼光可真是独到啊！哈哈哈哈，小店这匹锦缎可是苏州最顶尖的织工亲手打造，每一丝每一缕都透着精致，这样的宝物，被您一下子就瞧上了，真是慧眼识珠啊！我敢说，只有像您这样眼光绝顶的客官，才能把这锦缎的美展现得淋漓尽致！</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 500px;"><source src="audios/duobo_yinxiao/TTS 30s-5 (1).mp3" autoplay/>Your browser does not support the audio element.</audio><br> 父亲：你这个混蛋，我们会让你付出代价的！ 反派：你们以为这样就能打击到我？不过是做生意罢了，我还会在乎这个吗？ 母亲：生意？你说的是我们的孩子，是我们的心肝宝贝！求求你告诉我们孩子在哪！ 父亲：你这个畜生，根本不配做人！你知道我们为了找到孩子付出了多少吗？ 反派：哼，怪我吗？是你们自己没管好小孩，也不找找自己的原因。 </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+</div>
+
+<!-- <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<h2 id="App-E-chat" style="text-align: center;">Effect of Continual Supervised Finetuning</h2>
 		<p>By integrating SenseVoice, LLMs, and CosyVoice, we can develop an Emotional Voice Chat application. In the following example, both the User and Assistant content are synthesized by CosyVoice.</p>
 	<p style="text-align: center;">
 		<img src="pics/EmotionalVoiceChat.png" height="368" width="1600">
@@ -198,7 +208,7 @@
 			</tbody>
 		</table>
 		</div>
-</div>
+</div> -->
 
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<h2 id="App-agentic" style="text-align: center;">Interactive Podcast</h2>
