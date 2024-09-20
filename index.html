@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/custom.css">
 	<link rel="stylesheet" href="css/normalize.css">
 
-	<title>FunAudioLLM Homepage</title>
+	<title>TakinAudioLLM Homepage</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -26,21 +26,24 @@
 
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<div class="text-center">
-	<h2>Takin: A Cohort of Superior Quality Zero-shot Speech Generation Models </h2>
+	<!-- <h2>Takin: A Cohort of Superior Quality Zero-shot Speech Generation Models </h2> -->
+	<div class="text-center">
+		<h2>
+            <img src="pics/takin-icon.png" alt="icon" style="width:56px; height:48px; vertical-align:middle; margin-right:10px;">
+            Takin: A Cohort of Superior Quality Zero-shot Speech Generation Models
+        </h2>
 
-      [<a href="https://arxiv.org/abs/2407.04051">Paper</a>]
-		[<a href="https://github.com/FunAudioLLM">Code</a>]
-		<!-- [Modelscope:<a href="https://www.modelscope.cn/studios/iic/SenseVoice">SenseVoice</a> <a href="https://www.modelscope.cn/studios/iic/CosyVoice-300M">CosyVoice</a>]
-		[HuggingFace: <a href="https://huggingface.co/FunAudioLLM/SenseVoiceSmall">SenseVoice</a> CosyVoice] -->
+      [<a href="https://arxiv.org/abs/2409.12139">Paper</a>]
+		[<a href="https://everest-ai.ximalaya.com/">Official Website</a>]
         <p class="fst-italic mb-0">
-			<br>
+			<br>·
 			<b>Everest Team</b>
 		<p></p>
         </p>
         <p>Ximalaya Inc.</p>
 	</div>
 	<p><b>Abstract:</b>
-<!--		We introduce FunAudioLLM, ....-->
+<!--		Introduce TakinAudioLLM, ....-->
 	This report introduces <b>Takin AudioLLM</b>, a toolkit designed to enhance the production quality and efficiency in audiobook production and other AIGC scenarios. 
 	Its core comprises three innovative models: <b>Takin TTS</b>, <b>Takin VC</b>, and <b>Takin Morphing</b>. 
 	Takin TTS is primarily used for generating highly expressive audio content, with control over tone and emotion; 
@@ -50,97 +53,71 @@
 	These models incorporate the latest LLMs technology in the industry, achieving significant improvements over the previous generation of voice content production. 
 	We deeply integrate our self-developed capabilities into fields such as audiobook production, podcast interaction, and virtual avatar customization, 
 	advancing the practical application of audio large language models.
-	<p style="text-align: center;">
+	<!-- <p style="text-align: center;">
 		<img src="pics/takin-tts-emo.png" height="480" width="1280">
-	</p>
-<!--
-		<li> SenseVoice supports high-precision multilingual ASR, excels over Whisper in Chinese and Cantonese recognition, and has SOTA emotion recognition capabilities. </li>
-		<li> SenseVoice-small has extremely high inference efficiency, being 7 times faster than Whisper-small and 17 times faster than Whisper-large. </li>
-		<li> The CosyVoice model, pre-trained on 150,000+ hours of meticulous multi-lingual, multi-speaker data, pioneers as the first industry-grade, open-source speech synthesis tool. </li>
-		<li> CosyVoice offers multi-language support for English, Mandarin, Japanese, Korean, and Cantonese, enabling zero-shot voice generation, and includes seven speakers fine-tuned for immediate use. </li>
-		<li> CosyVoice-instruct also offers emotional expression, event control, and detailed adjustments like speed and pitch, and it ensures versatile and nuanced speech generation.</li>
-		<li> FunAudioLLM has developed a variety of application demos, including simultaneous interpretation, emotional voice interaction, interactive podcasts, and multi-character audiobook narration.</li>
--->
-<!-- </p>
-	</p>
-
-	<p>
-	<b>Contents</b>
-      <ul>
-      	<li><a href="#App-S2ST">Applications</a>
-			<ul>
-				<li><a href="#App-S2ST">Speech-to-Speech Translation</a></li>
-				<li><a href="#App-E-chat">Emotional VoiceChat</a></li>
-				<li><a href="#App-agentic">Interactive PodCast</a></li>
-				<li><a href="#App-audiobook">Expressive Audiobook </a></li>
-			</ul>
-		  </li>
-        <li><a href="#CosyVoice-overview">Voice Generation Model: CosyVoice</a>
-			<ul>
-				<li><a href="#CosyVoice-overview">Overview of CosyVoice</a></li>
-				<li><a href="#CosyVoice-basic">Multi-lingual Voice Generation</a></li>
-				<li><a href="#CosyVoice-zeroshot">Zero-shot In-context Generation</a></li>
-				<li><a href="#CosyVoice-instructed">Instructed Voice Generation</a></li>
-				<li><a href="#CosyVoice-emotion">Emotionally Expressive Voice Generation</a></li>
-				<li><a href="#CosyVoice-sft">Speaker Fine-tune</a></li>
-				<li><a href="#CosyVoice-intep">Speaker Interpolation</a></li>
-				<li><a href="#Demos">Demo</a></li>
-			</ul>
-		</li>
-        <li><a href="#SenseVoice-overview">Voice Understanding Model: SenseVoice</a>
-			<ul>
-				<li><a href="#SenseVoice-overview">Overview of SenseVoice </a></li>
-				<li><a href="#SenseVoice-ASR"> Multilingual Speech Recognition</a></li>
-				<li><a href="#SenseVoice-emotion">Speech Emotion Recognition</a></li>
-				<li><a href="#SenseVoice-AED">Audio Event Detection</a></li>
-				<li><a href="#SenseVoice-demo">Rich Transcribe Demo Samples</a></li>
-			</ul>
-		</li>
-	</p>
-</div> -->
+	</p> -->
 
 
 
 <!------ Application -------------------------->
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h2 id="App-S2ST" style="text-align: center;">Text-to-Speech Generation</h2>
-		<p>By integrating SenseVoice, LLMs, and CosyVoice, we can effortlessly perform speech-to-speech translation (S2ST). Note that the original recordings are highlighted in bold.
+	<h2 id="App-S2ST" style="text-align: center;">Audiobook Production</h2>
+		<p>The technology of Takin AudioLLM has been applied to Ximalaya's internal audiobook production, providing users with rich and high-quality audio content.
 	</p>
-	<p style="text-align: center;">
+	<!-- <p style="text-align: center;">
 		<img src="pics/S2ST.png" height="368" width="1600">
-	</p>
+	</p> -->
 		<div class="table-responsive pt-3">
 			<table class="table table-hover pt-2">
 				<thead>
 				<tr>
-					<th colspan="2" style="vertical-align : middle;text-align: center">利用Takin-TTS生产的合成内容 （Synthetic content produced using Takin-TTS）</th>
+					<th colspan="4" style="vertical-align : middle;text-align: center">利用Takin-TTS生产的多播有声内容 （Synthetic content produced using Takin-TTS）</th>
 					<th style="vertical-align : middle;text-align: center"> </th>
 				</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 500px;"><source src="audios/duobo_yinxiao/TTS-后期-绸缎 (1).mp3" autoplay/>Your browser does not support the audio element.</audio><br> 哎哟，这位客官，您的眼光可真是独到啊！哈哈哈哈，小店这匹锦缎可是苏州最顶尖的织工亲手打造，每一丝每一缕都透着精致，这样的宝物，被您一下子就瞧上了，真是慧眼识珠啊！我敢说，只有像您这样眼光绝顶的客官，才能把这锦缎的美展现得淋漓尽致！</td>
-						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 500px;"><source src="audios/duobo_yinxiao/TTS 30s-5 (1).mp3" autoplay/>Your browser does not support the audio element.</audio><br> 父亲：你这个混蛋，我们会让你付出代价的！ 反派：你们以为这样就能打击到我？不过是做生意罢了，我还会在乎这个吗？ 母亲：生意？你说的是我们的孩子，是我们的心肝宝贝！求求你告诉我们孩子在哪！ 父亲：你这个畜生，根本不配做人！你知道我们为了找到孩子付出了多少吗？ 反派：哼，怪我吗？是你们自己没管好小孩，也不找找自己的原因。 </td>
+						<td colspan="2" style="vertical-align: top; text-align: center;">
+							<img src="pics/aletai.png" alt="Image description" style="width: 300px; height: auto;">
+						</td>
+						<td colspan="2" style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 500px;"><source src="audios/audiobook/我的阿勒泰.mp3" autoplay/>Your browser does not support the audio element.</audio><br>欢迎到喜马拉雅平台收听我们专辑的完整版。Welcome to the Ximalaya platform to listen to the full version of our album.[<a href="https://www.ximalaya.com/album/77614003">Link</a>]</td>
 					</tr>
 					<tr>
-						<th colspan="2" style="vertical-align : middle;text-align: center">单播多风格 （Synthetic content produced using Takin-TTS）</th>
+						<td colspan="2" style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 500px;"><source src="audios/duobo_yinxiao/TTS-后期-绸缎 (1).mp3" autoplay/>Your browser does not support the audio element.</audio><br> 哎哟，这位客官，您的眼光可真是独到啊！哈哈哈哈，小店这匹锦缎可是苏州最顶尖的织工亲手打造，每一丝每一缕都透着精致，这样的宝物，被您一下子就瞧上了，真是慧眼识珠啊！我敢说，只有像您这样眼光绝顶的客官，才能把这锦缎的美展现得淋漓尽致！</td>
+						<td colspan="2" style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 500px;"><source src="audios/duobo_yinxiao/TTS 30s-5 (1).mp3" autoplay/>Your browser does not support the audio element.</audio><br> 父亲：你这个混蛋，我们会让你付出代价的！ 反派：你们以为这样就能打击到我？不过是做生意罢了，我还会在乎这个吗？ 母亲：生意？你说的是我们的孩子，是我们的心肝宝贝！求求你告诉我们孩子在哪！ 父亲：你这个畜生，根本不配做人！你知道我们为了找到孩子付出了多少吗？ 反派：哼，怪我吗？是你们自己没管好小孩，也不找找自己的原因。 </td>
+					</tr>
+					<tr>
+						<th colspan="4" style="vertical-align : middle;text-align: center">利用Takin-TTS生产的单播多风格有声内容 （Synthetic content produced using Takin-TTS）</th>
 						<th style="vertical-align : middle;text-align: center"> </th>
 					</tr>
 					<tr>
-						<td colspan="2" style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 1000px;"><source src="audios/danbo_duofengge/悬疑_喜千辉.mp3" autoplay/>Your browser does not support the audio element.</audio><br> 哎哟，这位客官，您的眼光可真是独到啊！哈哈哈哈，小店这匹锦缎可是苏州最顶尖的织工亲手打造，每一丝每一缕都透着精致，这样的宝物，被您一下子就瞧上了，真是慧眼识珠啊！我敢说，只有像您这样眼光绝顶的客官，才能把这锦缎的美展现得淋漓尽致！</td>
+						<td colspan="4" style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 1000px;"><source src="audios/danbo_duofengge/悬疑_喜千辉.mp3" autoplay/>Your browser does not support the audio element.</audio><br> 哎哟，这位客官，您的眼光可真是独到啊！哈哈哈哈，小店这匹锦缎可是苏州最顶尖的织工亲手打造，每一丝每一缕都透着精致，这样的宝物，被您一下子就瞧上了，真是慧眼识珠啊！我敢说，只有像您这样眼光绝顶的客官，才能把这锦缎的美展现得淋漓尽致！</td>
 					</tr>
 					<tr>
-						<td colspan="2" style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 1000px;"><source src="audios/danbo_duofengge/1-1睡眠之夜v1.3版本.mp3" autoplay/>Your browser does not support the audio element.</audio><br> 哎哟，这位客官，您的眼光可真是独到啊！哈哈哈哈，小店这匹锦缎可是苏州最顶尖的织工亲手打造，每一丝每一缕都透着精致，这样的宝物，被您一下子就瞧上了，真是慧眼识珠啊！我敢说，只有像您这样眼光绝顶的客官，才能把这锦缎的美展现得淋漓尽致！</td>
+						<td colspan="4" style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 1000px;"><source src="audios/danbo_duofengge/1-1睡眠之夜v1.3版本.mp3" autoplay/>Your browser does not support the audio element.</audio><br> 哎哟，这位客官，您的眼光可真是独到啊！哈哈哈哈，小店这匹锦缎可是苏州最顶尖的织工亲手打造，每一丝每一缕都透着精致，这样的宝物，被您一下子就瞧上了，真是慧眼识珠啊！我敢说，只有像您这样眼光绝顶的客官，才能把这锦缎的美展现得淋漓尽致！</td>
 					</tr>
 				</tbody>
+				<!-- <tr>
+					<th colspan="2" style="vertical-align: middle; text-align: center">TTS生成音频驱动的虚拟人（MP4 Playback Example）</th>
+					<th style="vertical-align: middle; text-align: center"> </th>
+				</tr>
+				<tr>
+					<td colspan="2" style="vertical-align: top; text-align: center;">
+						<video controls="controls" style="width: 1000px;">
+							<source src="videos/demo1.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video><br>
+						示例视频内容描述（Sample video content description）
+					</td>
+				</tr> -->
 			</table>
 		</div>
 </div>
 
 <!------ Application -------------------------->
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h2 id="App-S2ST" style="text-align: center;">Effect of Continual Supervised Finetuning</h2>
-		<p>By integrating SenseVoice, LLMs, and CosyVoice, we can effortlessly perform speech-to-speech translation (S2ST). Note that the original recordings are highlighted in bold.
+	<h2 id="App-S2ST" style="text-align: center;">Effect of Mimicking Sound Generation.</h2>
+		<p>The performance of the audio large model in mimicking sound effects is significantly better than the previous-generation TTS system..
 	</p>
 	<p style="text-align: center;">
 		<img src="pics/S2ST.png" height="368" width="1600">
@@ -185,9 +162,9 @@
 			</tr>
 			</tbody>
 			<thead>
-			<!--<tr>
+			<tr>
 				<th style="vertical-align : middle;text-align: center">Chat Transcription </th>
-			</tr>-->
+			</tr>
 			</thead>
 			<tbody>
 			<tr>
@@ -257,7 +234,7 @@
 	</div>
 </div>
 
-<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+<!-- <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<h2 id="App-audiobook" style="text-align: center;">Expressive Audiobook </h2>
 	<p>Through the analytical capabilities of LLMs to structure and identify emotions within books, and synthesizing this with CosyVoice, we achieve audiobooks with enhanced expressiveness.</p>
 	<p style="text-align: center;">
@@ -283,31 +260,196 @@
 			</tbody>
 		</table>
 	</div>
+</div> -->
+
+
+<!------ Application -------------------------->
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<h2 id="App-S2ST" style="text-align: center;">Effect of Mimicking Sound Generation.</h2>
+		<p>The performance of the audio large model in mimicking sound effects is significantly better than the previous-generation TTS system..
+	</p>
+	<p style="text-align: center;">
+		<img src="pics/S2ST.png" height="368" width="1600">
+	</p>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+				<thead>
+				<tr>
+					<th colspan="2" style="vertical-align : middle;text-align: center">利用Takin-TTS生产的合成内容 （Synthetic content produced using Takin-TTS）</th>
+					<th style="vertical-align : middle;text-align: center"> </th>
+				</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 500px;"><source src="audios/duobo_yinxiao/TTS-后期-绸缎 (1).mp3" autoplay/>Your browser does not support the audio element.</audio><br> 哎哟，这位客官，您的眼光可真是独到啊！哈哈哈哈，小店这匹锦缎可是苏州最顶尖的织工亲手打造，每一丝每一缕都透着精致，这样的宝物，被您一下子就瞧上了，真是慧眼识珠啊！我敢说，只有像您这样眼光绝顶的客官，才能把这锦缎的美展现得淋漓尽致！</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 500px;"><source src="audios/duobo_yinxiao/TTS 30s-5 (1).mp3" autoplay/>Your browser does not support the audio element.</audio><br> 父亲：你这个混蛋，我们会让你付出代价的！ 反派：你们以为这样就能打击到我？不过是做生意罢了，我还会在乎这个吗？ 母亲：生意？你说的是我们的孩子，是我们的心肝宝贝！求求你告诉我们孩子在哪！ 父亲：你这个畜生，根本不配做人！你知道我们为了找到孩子付出了多少吗？ 反派：哼，怪我吗？是你们自己没管好小孩，也不找找自己的原因。 </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 </div>
 
 
-
-<!------ CosyVoice -------------------------->
+<!------ Takin TTS -------------------------->
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
-	<h2 id="CosyVoice-overview" style="text-align: center;">Overview of CosyVoice</h2>
+	<h2 id="CosyVoice-overview" style="text-align: center;">Overview of Takin TTS</h2>
 	<body>
 	<p style="text-align: center;">
-		<img src="pics/overview-cosyvoice.png" height="400" width="1024">
+		<img src="pics/takin-tts-emo.png" height="400" width="1024">
 	</p>
 	</body>
 		<p style="text-align: center;" >
-			<b>Figure 1.</b> An overview of the CosyVoice Models at the inference stage.
-			In summary, CosyVoice consists of an autoregressive transformer to generate corresponding speech tokens
-			for input text, an ODE-based diffusion model, flow matching,
-			to reconstruct Mel spectrum from the generated speech tokens,
-			and a HiFTNet based vocoder to synthesize waveforms.
-			Dashed modules are optional in specific model usages, such as cross-lingual, SFT inference and so on.
-			[<a href="https://arxiv.org/abs/2407.05407">Paper</a>]
+			An overall summary during the training process of Takin TTS model. 
+			Takin TTS consists of an autoregressive transformer used to generate corresponding speech tokens for the input text. 
+			This includes pre-training phase, fine-tuning phase, instruction fine-tuning phase, and reinforcement learning phase, 
+			achieving high-quality hyper-realistic audio generation.
 		</p>
 </div>
 
 
+<!------ Application -------------------------->
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<h2 id="App-S2ST" style="text-align: center;">Effect of Continual Supervised Finetuning</h2>
+		<!-- <p>The technology of Takin AudioLLM has been applied to Ximalaya's internal audiobook production, providing users with rich and high-quality audio content. -->
+	</p>
+	<!-- <p style="text-align: center;">
+		<img src="pics/S2ST.png" height="368" width="1600">
+	</p> -->
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+				<tbody>
+					<tr>
+						<td style="vertical-align : top;text-align:center;"><b>Text</b></td>
+						<td style="vertical-align : top;text-align:center;"><b>Prompt</b></td>
+						<td style="vertical-align : top;text-align:center;"><b>Before CSFT</b></td>
+						<td style="vertical-align : top;text-align:center;"><b>After CSFT</b></td>
+					</tr>
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">我真的很喜欢吃西瓜，贼好吃！</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/haowen_demo.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/haowen_before_csft.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/haowen_after_csft.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+					</tr>
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">说来也巧，那个暴风之夜，一个神秘老人来到杰克的四层皇宫中，预言说今晚杰克会去一个巨人国。杰克大怒，将他赶出宫去。
+							到了晚上，一阵狂风吹过，杰克不知怎么地真的来到了一个地方。只见这里草都像树一样矮小，房顶都快碰到天了，难道这就是巨人国？他爬到了一座矮小的秃山上，歇息了一会儿，正预备上路时，一只巨大的手从天而降抓住了杰克。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/shuolaiyeqiao-demo.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/shuolaiyeqiao-before-csft.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/shuolaiyeqiao-after-csft.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+					</tr>
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">小宝宝听了，甜甜地笑了，静静地沉入梦乡。在这个美好的梦境中，他渐渐忘记了白天的烦恼，享受美好的睡眠时光。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/xiaobaobao-demo.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/xiaobaobao-before-csft.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/xiaobaobao-after-csft.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+					</tr>
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">肖锵剑术虽超群而凌厉，待人接物却是鱼龙帮上下公认的和善，脾气也好，再者身边女子是他关门弟子，脸上露出一抹会心笑意，说道：“为师这辈子也才去过一趟北莽，想起来也没啥可称道的经历，倒是公孙杨那只老闷葫芦，名声其实都是在那边闯荡出来的。” 极为内秀的女子显然便是刘老帮主孙女刘妮蓉，讶异道：“公孙客卿不是旧西蜀人吗？” 肖锵摸了摸剑鞘，轻声唏嘘道：“谁家没有一本难念的经，闷葫芦不愿说罢了。” 刘妮蓉转头瞥了一眼马车，在帮里便一直深居简出的公孙杨就独坐在车上，重新转头后放低声音问道：“师父，你说这一车货物本钱是多少？” 肖锵笑道：“就货物本身来说，便是在富得流油的江南道上，也不便宜，大概得有六七千两才拿得下来，加上这北凉到江南一去一来，与各路牛鬼蛇神的过境打点，没有一万两银子是不可能的。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/xqjs-demo.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/xqjs-before-csft.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/xqjs-after-csft.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+</div>
+
+
+<!------ Reinforcement Learning -------------------------->
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<h2 id="App-S2ST" style="text-align: center;">Effect of Reinforcement Learning</h2>
+	</p>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+					<tr>
+						<td style="vertical-align : top;text-align:center;"><b>Text</b></td>
+						<td style="vertical-align : top;text-align:center;"><b>Prompt</b></td>
+						<td style="vertical-align : top;text-align:center;"><b>Before CSFT</b></td>
+						<td style="vertical-align : top;text-align:center;"><b>After CSFT</b></td>
+					</tr>
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">我真的很喜欢吃西瓜，贼好吃！</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/haowen_demo.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/haowen_before_csft.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 240px;"><source src="audios/csft/haowen_after_csft.mp3" autoplay/>Your browser does not support the audio element.</audio><br></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+</div>
+
+
+<!------ Instruction Style Control -------------------------->
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<h2 id="App-S2ST" style="text-align: center;">Instruction Style Control</h2>
+	</p>
+		<div class="table-responsive pt-3">
+			<table class="table table-hover pt-2">
+				<tbody>
+					<tr>
+						<td style="vertical-align : top;text-align:center;"><b>Instruction</b></td>
+						<td style="vertical-align : top;text-align:center;"><b>Female</b></td>
+						<td style="vertical-align : top;text-align:center;"><b>Male</b></td>
+					</tr>
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">说话人带着笑意，节奏欢快，洋溢着开心的情绪</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 300px;"><source src="audios/csft/xiaoyi-demo1.mp3" autoplay/>Your browser does not support the audio element.</audio><br>哎哟，我懂你意思了，哈哈哈，我帮你总结一下，你看看我说得对不对哈！</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 300px;"><source src="audios/csft/xiaoyi-demo2.mp3" autoplay/>Your browser does not support the audio element.</audio><br>这是我一直以来的梦想，谢谢你老宋。你让我来当主演这消息一旦传出去，绝对可以登上各大新闻报纸的头条，号召力绝对要远超那个什么李修。</td>
+					</tr>
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">说话人带着哭腔，慢慢地说，语气中充满悲伤的情感</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 300px;"><source src="audios/csft/kuqiang-demo1.mp3" autoplay/>Your browser does not support the audio element.</audio><br>都是我不好，要是我乖乖的和紫华山的人走，姐姐和冯超大哥也不会被他们抓进去啊。</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 300px;"><source src="audios/csft/kuqiang-demo2.mp3" autoplay/>Your browser does not support the audio element.</audio><br>就算我们失败了，我也永远不会忘记那一日。母亲带着我已经逃到了让我们都心生期望之地。可只住下了几天，许久不曾出现的袁金红，竟然出现在我们面前，并且无论我如何的哀求, 她也没有放过母亲。</td>
+					</tr>
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">说话人语气傲慢，娓娓道来的语速中充满深深的厌恶和不屑</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 300px;"><source src="audios/csft/disgust-demo1.mp3" autoplay/>Your browser does not support the audio element.</audio><br>这过分啦！江森老爷不明摆着耍赖嘛！我看这江家几个做长辈的没有半点长辈的样子，只要能弄到好处，叫他换个爹都成，真真是不要脸。自打他们搬过来了，就鸡飞狗跳的。他们不来，咱们宝灵城安稳的很，偏他们一来就天天闹。我儿子要跟江家这几个似的，我非得打死他不可。</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 300px;"><source src="audios/csft/disgust-demo2.mp3" autoplay/>Your browser does not support the audio element.</audio><br>他总是一副很骄傲的样子，也不知道他在得意些什么，要不是看在我哥的面子上我还真是懒得理他！</td>
+					</tr>
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">说话人语气急切，情绪激动，表现出非常气愤的情绪</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 300px;"><source src="audios/csft/anger-demo1.mp3" autoplay/>Your browser does not support the audio element.</audio><br>那李公子当真可恨至极！今日诗会上，竟当众讥讽我所做之诗浅薄无趣，还道我才学浮浅，不通文理。</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 300px;"><source src="audios/csft/anger-demo2.mp3" autoplay/>Your browser does not support the audio element.</audio><br>两个儿子被欺负成这个样子，你不敢对秦文德那一家子发火，居然还瞪我?你也算个男人？</td>
+					</tr>
+
+					<tr>
+						<td style="vertical-align : middle;text-align:center;">说话人带一点哭腔，语气中充满了恐惧害怕</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 300px;"><source src="audios/csft/fear-demo1.mp3" autoplay/>Your browser does not support the audio element.</audio><br>林公子是我有眼不识泰山，求求您了放我一条生路吧！</td>
+						<td style="vertical-align : top;text-align:center;"><audio controls="controls" style="width: 300px;"><source src="audios/csft/fear-demo2.mp3" autoplay/>Your browser does not support the audio element.</audio><br>你到底是什么人？你有什么目的？你要做什么？</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+</div>
+
+
+<!------ Takin VC -------------------------->
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+	<h2 id="takin-tts-overview" style="text-align: center;">Overview of Takin VC</h2>
+	<body>
+	<p style="text-align: center;">
+		<img src="pics/takin-vc.png" height="400" width="1024">
+	</p>
+	</body>
+		<p style="text-align: center;" >
+			A schematic diagram of the Takin VC overall structure. 
+			Takin VC can accept prompt audio of around 15 seconds and convert the original audio content into the target speaker's voice.
+		</p>
+</div>
+
+
+<!-- <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<h2 id="CosyVoice-basic" style="text-align: center;">Multi-lingual Voice Generation</h2>
 		<div class="table-responsive pt-3">
 			<table class="table table-hover pt-2">
@@ -367,7 +509,7 @@
 				</tbody>
 			</table>
 		</div>
-</div>
+</div> -->
 
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<h2 id="CosyVoice-zeroshot" style="text-align: center;">Zero-shot In-context Generation</h2>
