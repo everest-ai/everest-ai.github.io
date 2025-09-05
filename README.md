@@ -1,3 +1,5 @@
-# FunAudioLLM
+# 启动服务
+$ python has_local_server.py
 
-FunAudioLLM is an open-source project for voice understanding and generation models from Tongyi Speech Lab, Alibaba Group.
+# 网页打开http://localhost:6781/即可
+
