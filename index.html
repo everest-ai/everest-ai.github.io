@@ -80,8 +80,8 @@
         
         .comparison-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
             margin-top: 20px;
         }
         
@@ -288,82 +288,34 @@
             </div>
         </div>
 
-        <!-- 2. 多播角色音生成 -->
+        <!-- 2. 角色音对比展示 -->
         <div class="feature-section">
-            <h2>2. 多播角色音生成</h2>
-            <p>为不同角色生成独特的语音特征，支持多角色对话场景。</p>
+            <h2>2. 角色音对比展示</h2>
+            <p>基于上下文理解的角色音生成对比，展示Takin AudioLLM与CosyVoice在角色音生成方面的差异。</p>
             
+            <!-- Prompt音频展示 -->
             <div class="comparison-section">
-                <h3>系统对比：多播角色音生成</h3>
-                <div class="comparison-grid">
-                    <div class="comparison-item takin">
-                        <h4>🎯 Takin AudioLLM</h4>
-                        <div class="text-sample">
-                            <strong>女性角色：</strong> "哎哟，这位客官，您的眼光可真是独到啊！"<br>
-                            <strong>男性角色：</strong> "父亲：你这个混蛋，我们会让你付出代价的！"
-                        </div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/multi_voice/takin_female.mp3, takin_male.mp3
-                        </div>
-                        <div class="audio-placeholder" id="takin-female-placeholder">
-                            🎵 Takin 女性角色
-                        </div>
-                        <audio controls class="audio-controls" preload="none" style="display:none;" id="takin-female-audio">
-                            <source src="audios/multi_voice/takin_female.mp3" type="audio/mpeg">
-                        </audio>
-                        <div class="audio-placeholder" id="takin-male-placeholder">
-                            🎵 Takin 男性角色
-                        </div>
-                        <audio controls class="audio-controls" preload="none" style="display:none;" id="takin-male-audio">
-                            <source src="audios/multi_voice/takin_male.mp3" type="audio/mpeg">
-                        </audio>
+                <h3>角色音Prompt</h3>
+                <div class="comparison-item takin">
+                    <h4>🎯 角色音参考音频</h4>
+                    <div class="text-sample">
+                        <strong>角色：</strong> 夏姝（女-少年）<br>
+                        <strong>描述：</strong> 太平教道童，机灵活泼，对师兄充满好奇
                     </div>
-                    
-                    <div class="comparison-item cosyvoice">
-                        <h4>🎭 CosyVoice</h4>
-                        <div class="text-sample">
-                            <strong>女性角色：</strong> "哎哟，这位客官，您的眼光可真是独到啊！"<br>
-                            <strong>男性角色：</strong> "父亲：你这个混蛋，我们会让你付出代价的！"
-                        </div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/multi_voice/cosyvoice_female.mp3, cosyvoice_male.mp3
-                        </div>
-                        <div class="audio-placeholder" id="cosyvoice-female-placeholder">
-                            🎵 CosyVoice 女性角色
-                        </div>
-                        <audio controls class="audio-controls" preload="none" style="display:none;" id="cosyvoice-female-audio">
-                            <source src="audios/multi_voice/cosyvoice_female.mp3" type="audio/mpeg">
-                        </audio>
-                        <div class="audio-placeholder" id="cosyvoice-male-placeholder">
-                            🎵 CosyVoice 男性角色
-                        </div>
-                        <audio controls class="audio-controls" preload="none" style="display:none;" id="cosyvoice-male-audio">
-                            <source src="audios/multi_voice/cosyvoice_male.mp3" type="audio/mpeg">
-                        </audio>
+                    <div class="audio-placeholder" id="prompt-xiashu-placeholder">
+                        🎵 角色音参考音频 (夏姝)
                     </div>
-                    
-                    <div class="comparison-item moss-ttsd">
-                        <h4>🤖 MOSS-TTSD</h4>
-                        <div class="text-sample">
-                            <strong>女性角色：</strong> "哎哟，这位客官，您的眼光可真是独到啊！"<br>
-                            <strong>男性角色：</strong> "父亲：你这个混蛋，我们会让你付出代价的！"
-                        </div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/multi_voice/moss_female.mp3, moss_male.mp3
-                        </div>
-                        <div class="audio-placeholder" id="moss-female-placeholder">
-                            🎵 MOSS-TTSD 女性角色
-                        </div>
-                        <audio controls class="audio-controls" preload="none" style="display:none;" id="moss-female-audio">
-                            <source src="audios/multi_voice/moss_female.mp3" type="audio/mpeg">
-                        </audio>
-                        <div class="audio-placeholder" id="moss-male-placeholder">
-                            🎵 MOSS-TTSD 男性角色
-                        </div>
-                        <audio controls class="audio-controls" preload="none" style="display:none;" id="moss-male-audio">
-                            <source src="audios/multi_voice/moss_male.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
+                    <audio controls class="audio-controls" preload="none" style="display:none;" id="prompt-xiashu-audio">
+                        <source src="audios/duibai/prompt/xiashu.wav" type="audio/wav">
+                    </audio>
+                </div>
+            </div>
+
+            <!-- 角色音对比展示 -->
+            <div class="comparison-section">
+                <h3>角色音生成对比</h3>
+                <div id="duibai-demos">
+                    <!-- 动态生成的对比内容 -->
                 </div>
             </div>
         </div>
@@ -655,20 +607,147 @@
             }
         }
 
+        // 角色音对比数据
+        const duibaiData = [
+            {
+                id: "1000005",
+                text: "师父的符水",
+                fullText: "师父的符水真灵验，五日前师兄还是个活死人，现已生龙活虎。",
+                speaker: "夏姝-女-少年",
+                context: "女娃侧首睃了周奕一眼，称奇道，",
+                nextContext: "应该是师父道法高明才对，"
+            },
+            {
+                id: "1000014", 
+                text: "是",
+                fullText: "是。",
+                speaker: "夏姝-女-少年",
+                context: "江湖上精通巫术的灵媒婆子可不少，比如巴蜀合一派的通天神姥，她就能沟通阴阳。夏姝，你说是不是？",
+                nextContext: "小女娃缩着脖子，"
+            },
+            {
+                id: "1000016",
+                text: "但通天神姥",
+                fullText: "但通天神姥乃是合一派前辈高人，你用灵媒婆子称呼太过不敬。再者师兄乃是中毒，自然是符水解了毒。",
+                speaker: "夏姝-女-少年", 
+                context: "小女娃缩着脖子，",
+                nextContext: "额。"
+            },
+            {
+                id: "1000019",
+                text: "大病初愈后",
+                fullText: "大病初愈后，师兄变化好大，最近伤春悲秋，总发诗兴。",
+                speaker: "夏姝-女-少年",
+                context: "两个天真的家伙，周奕闷色稍解，轻轻笑了笑。他们争执一通，见师兄不理会，遂又凑了上来。夏姝捧着肥肉脸，眼中泛着好奇，",
+                nextContext: "对啊对啊，"
+            },
+            {
+                id: "1000024",
+                text: "这是有心事",
+                fullText: "这是有心事？",
+                speaker: "夏姝-女-少年",
+                context: "晏秋较为单纯，不明其意。",
+                nextContext: "夏姝却机灵一些，追问道，"
+            },
+            {
+                id: "1000026",
+                text: "方才师兄所",
+                fullText: "方才师兄所念，可是新作？",
+                speaker: "夏姝-女-少年",
+                context: "夏姝却机灵一些，追问道，",
+                nextContext: "不是。"
+            },
+            {
+                id: "1000037",
+                text: "是。",
+                fullText: "是。",
+                speaker: "夏姝-女-少年",
+                context: "看守道坛，侍奉香客去吧。",
+                nextContext: "夏姝与晏秋当即应诺。待他们走后，老道领着周奕进入厢房静处，执其腕细细诊脉。"
+            }
+        ];
+
+        // 生成角色音对比内容
+        function generateDuibaiDemos() {
+            const container = document.getElementById('duibai-demos');
+            if (!container) return;
+
+            duibaiData.forEach(item => {
+                const demoDiv = document.createElement('div');
+                demoDiv.className = 'comparison-grid';
+                demoDiv.innerHTML = `
+                    <div class="comparison-item cosyvoice">
+                        <h4>🎭 CosyVoice</h4>
+                        <div class="text-sample">
+                            <strong>上文：</strong> ${item.context}<br>
+                            <strong>角色：</strong> ${item.speaker}<br>
+                            <strong>文本：</strong> "${item.fullText}"<br>
+                            <strong>下文：</strong> ${item.nextContext}
+                        </div>
+                        <div class="audio-placeholder" id="cosyvoice-${item.id}-placeholder">
+                            🎵 CosyVoice 音频
+                        </div>
+                        <audio controls class="audio-controls" preload="none" style="display:none;" id="cosyvoice-${item.id}-audio">
+                            <source src="audios/duibai/${item.id}-${item.text}-cosyvoice.wav" type="audio/wav">
+                        </audio>
+                    </div>
+                    
+                    <div class="comparison-item takin">
+                        <h4>🎯 Takin AudioLLM (Context)</h4>
+                        <div class="text-sample">
+                            <strong>上文：</strong> ${item.context}<br>
+                            <strong>角色：</strong> ${item.speaker}<br>
+                            <strong>文本：</strong> "${item.fullText}"<br>
+                            <strong>下文：</strong> ${item.nextContext}
+                        </div>
+                        <div class="audio-placeholder" id="takin-${item.id}-context-placeholder">
+                            🎵 Takin Context 音频
+                        </div>
+                        <audio controls class="audio-controls" preload="none" style="display:none;" id="takin-${item.id}-context-audio">
+                            <source src="audios/duibai/${item.id}-${item.text}-context.wav" type="audio/wav">
+                        </audio>
+                    </div>
+                    
+                    <div class="comparison-item moss-ttsd">
+                        <h4>🤖 MOSS-TTSD</h4>
+                        <div class="text-sample">
+                            <strong>上文：</strong> ${item.context}<br>
+                            <strong>角色：</strong> ${item.speaker}<br>
+                            <strong>文本：</strong> "${item.fullText}"<br>
+                            <strong>下文：</strong> ${item.nextContext}
+                        </div>
+                        <div class="audio-placeholder" id="moss-${item.id}-placeholder">
+                            🎵 MOSS-TTSD 音频
+                        </div>
+                        <audio controls class="audio-controls" preload="none" style="display:none;" id="moss-${item.id}-audio">
+                            <source src="audios/duibai/${item.id}-moss_ttsd.wav" type="audio/wav">
+                        </audio>
+                    </div>
+                `;
+                container.appendChild(demoDiv);
+            });
+        }
+
         // 初始化所有音频占位框
         document.addEventListener('DOMContentLoaded', function() {
+            // 生成角色音对比内容
+            generateDuibaiDemos();
+            
+            // 初始化角色音对比音频占位框
+            duibaiData.forEach(item => {
+                setupAudioPlaceholder(`takin-${item.id}-context-placeholder`, `takin-${item.id}-context-audio`);
+                setupAudioPlaceholder(`cosyvoice-${item.id}-placeholder`, `cosyvoice-${item.id}-audio`);
+                setupAudioPlaceholder(`moss-${item.id}-placeholder`, `moss-${item.id}-audio`);
+            });
+            
+            // 初始化prompt音频占位框
+            setupAudioPlaceholder('prompt-xiashu-placeholder', 'prompt-xiashu-audio');
+            
             // 长篇章旁白生成
             setupAudioPlaceholder('takin-narration-placeholder', 'takin-narration-audio');
             setupAudioPlaceholder('cosyvoice-narration-placeholder', 'cosyvoice-narration-audio');
             setupAudioPlaceholder('moss-narration-placeholder', 'moss-narration-audio');
             
-            // 多播角色音生成
-            setupAudioPlaceholder('takin-female-placeholder', 'takin-female-audio');
-            setupAudioPlaceholder('takin-male-placeholder', 'takin-male-audio');
-            setupAudioPlaceholder('cosyvoice-female-placeholder', 'cosyvoice-female-audio');
-            setupAudioPlaceholder('cosyvoice-male-placeholder', 'cosyvoice-male-audio');
-            setupAudioPlaceholder('moss-female-placeholder', 'moss-female-audio');
-            setupAudioPlaceholder('moss-male-placeholder', 'moss-male-audio');
             
             // 情感控制
             setupAudioPlaceholder('takin-happy-placeholder', 'takin-happy-audio');
