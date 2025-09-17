@@ -231,7 +231,7 @@
 
         .text-cell {
             padding: 10px 12px;
-            vertical-align: top;
+            vertical-align: middle;
         }
 
         .context-line {
@@ -260,6 +260,25 @@
         .context-line.current-text .context-content {
             color: #1976d2;
             font-weight: 500;
+        }
+
+
+        .emotion-tag {
+            color: #ff6b6b;
+            font-weight: 500;
+            font-size: 0.8rem;
+            margin-left: 8px;
+            background: #fff5f5;
+            padding: 4px 8px;
+            border-radius: 3px;
+            border: 1px solid #ffebee;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            line-height: 1;
+            height: 20px;
+            min-width: 60px;
         }
 
 
@@ -1208,145 +1227,9 @@
             <h2>3. 多播角色音控制</h2>
             <p>精确控制角色的情感表达和语音风格，实现细腻的情感演绎。</p>
             
-            <div class="comparison-section">
-                <h3>系统对比：情感控制（开心情绪）</h3>
-                <div class="comparison-grid">
-                    <div class="comparison-item takin">
-                        <h4>🎯 Takin AudioLLM</h4>
-                        <div class="text-sample">"哎哟，我懂你意思了，哈哈哈，我帮你总结一下！"</div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/emotion_control/takin_happy.mp3
-                        </div>
-                        <div class="audio-placeholder" id="takin-happy-placeholder">
-                            <span class="audio-icon"></span>Takin 开心情绪
-                        </div>
-                        <audio controls class="audio-controls" preload="none"  id="takin-happy-audio">
-                            <source src="audios/emotion_control/takin_happy.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    
-                    <div class="comparison-item cosyvoice">
-                        <h4>🎭 CosyVoice</h4>
-                        <div class="text-sample">"哎哟，我懂你意思了，哈哈哈，我帮你总结一下！"</div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/emotion_control/cosyvoice_happy.mp3
-                        </div>
-                        <div class="audio-placeholder" id="cosyvoice-happy-placeholder">
-                            <span class="audio-icon"></span>CosyVoice 开心情绪
-                        </div>
-                        <audio controls class="audio-controls" preload="none"  id="cosyvoice-happy-audio">
-                            <source src="audios/emotion_control/cosyvoice_happy.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    
-                    <div class="comparison-item moss-ttsd">
-                        <h4>🤖 MOSS-TTSD</h4>
-                        <div class="text-sample">"哎哟，我懂你意思了，哈哈哈，我帮你总结一下！"</div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/emotion_control/moss_happy.mp3
-                        </div>
-                        <div class="audio-placeholder" id="moss-happy-placeholder">
-                            <span class="audio-icon"></span>MOSS-TTSD 开心情绪
-                        </div>
-                        <audio controls class="audio-controls" preload="none"  id="moss-happy-audio">
-                            <source src="audios/emotion_control/moss_happy.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                </div>
-            </div>
-
-            <div class="comparison-section">
-                <h3>系统对比：情感控制（愤怒情绪）</h3>
-                <div class="comparison-grid">
-                    <div class="comparison-item takin">
-                        <h4>🎯 Takin AudioLLM</h4>
-                        <div class="text-sample">"那李公子当真可恨至极！今日诗会上，竟当众讥讽我所做之诗浅薄无趣！"</div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/emotion_control/takin_angry.mp3
-                        </div>
-                        <div class="audio-placeholder" id="takin-angry-placeholder">
-                            <span class="audio-icon"></span>Takin 愤怒情绪
-                        </div>
-                        <audio controls class="audio-controls" preload="none"  id="takin-angry-audio">
-                            <source src="audios/emotion_control/takin_angry.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    
-                    <div class="comparison-item cosyvoice">
-                        <h4>🎭 CosyVoice</h4>
-                        <div class="text-sample">"那李公子当真可恨至极！今日诗会上，竟当众讥讽我所做之诗浅薄无趣！"</div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/emotion_control/cosyvoice_angry.mp3
-                        </div>
-                        <div class="audio-placeholder" id="cosyvoice-angry-placeholder">
-                            <span class="audio-icon"></span>CosyVoice 愤怒情绪
-                        </div>
-                        <audio controls class="audio-controls" preload="none"  id="cosyvoice-angry-audio">
-                            <source src="audios/emotion_control/cosyvoice_angry.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    
-                    <div class="comparison-item moss-ttsd">
-                        <h4>🤖 MOSS-TTSD</h4>
-                        <div class="text-sample">"那李公子当真可恨至极！今日诗会上，竟当众讥讽我所做之诗浅薄无趣！"</div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/emotion_control/moss_angry.mp3
-                        </div>
-                        <div class="audio-placeholder" id="moss-angry-placeholder">
-                            <span class="audio-icon"></span>MOSS-TTSD 愤怒情绪
-                        </div>
-                        <audio controls class="audio-controls" preload="none"  id="moss-angry-audio">
-                            <source src="audios/emotion_control/moss_angry.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                </div>
-            </div>
-
-            <div class="comparison-section">
-                <h3>系统对比：情感控制（悲伤情绪）</h3>
-                <div class="comparison-grid">
-                    <div class="comparison-item takin">
-                        <h4>🎯 Takin AudioLLM</h4>
-                        <div class="text-sample">"都是我不好，要是我乖乖的和紫华山的人走，姐姐和冯超大哥也不会被他们抓进去啊。"</div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/emotion_control/takin_sad.mp3
-                        </div>
-                        <div class="audio-placeholder" id="takin-sad-placeholder">
-                            <span class="audio-icon"></span>Takin 悲伤情绪
-                        </div>
-                        <audio controls class="audio-controls" preload="none"  id="takin-sad-audio">
-                            <source src="audios/emotion_control/takin_sad.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    
-                    <div class="comparison-item cosyvoice">
-                        <h4>🎭 CosyVoice</h4>
-                        <div class="text-sample">"都是我不好，要是我乖乖的和紫华山的人走，姐姐和冯超大哥也不会被他们抓进去啊。"</div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/emotion_control/cosyvoice_sad.mp3
-                        </div>
-                        <div class="audio-placeholder" id="cosyvoice-sad-placeholder">
-                            <span class="audio-icon"></span>CosyVoice 悲伤情绪
-                        </div>
-                        <audio controls class="audio-controls" preload="none"  id="cosyvoice-sad-audio">
-                            <source src="audios/emotion_control/cosyvoice_sad.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    
-                    <div class="comparison-item moss-ttsd">
-                        <h4>🤖 MOSS-TTSD</h4>
-                        <div class="text-sample">"都是我不好，要是我乖乖的和紫华山的人走，姐姐和冯超大哥也不会被他们抓进去啊。"</div>
-                        <div class="placeholder-info">
-                            📁 音频文件位置: audios/emotion_control/moss_sad.mp3
-                        </div>
-                        <div class="audio-placeholder" id="moss-sad-placeholder">
-                            <span class="audio-icon"></span>MOSS-TTSD 悲伤情绪
-                        </div>
-                        <audio controls class="audio-controls" preload="none"  id="moss-sad-audio">
-                            <source src="audios/emotion_control/moss_sad.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                </div>
+            <!-- 角色情感控制演示 -->
+            <div id="emotion-control-demo">
+                <!-- 动态生成的情感控制内容 -->
             </div>
         </div>
 
@@ -1592,6 +1475,560 @@
             }
         };
 
+        // 情感控制演示数据
+        const emotionControlData = {
+            albert: {
+                name: "Albert",
+                description: "男性角色，声音沉稳",
+                prompt: "0342_minimax_voice_albert_1.wav",
+                instructionEmotions: {
+                    happy: {
+                        name: "非常高兴",
+                        text: "您要效仿知世郎？",
+                        context: "他非常兴奋地说道：",
+                        emotion: "非常高兴",
+                        files: {
+                            cosy2_1_5b: "happy.wav",
+                            cosyvoice2_base: "happy.wav"
+                        }
+                    },
+                    angry: {
+                        name: "非常愤怒",
+                        text: "您要效仿知世郎？",
+                        context: "他非常气愤地大声说道：",
+                        emotion: "非常愤怒",
+                        files: {
+                            cosy2_1_5b: "angry.wav",
+                            cosyvoice2_base: "angry.wav"
+                        }
+                    },
+                    sad: {
+                        name: "非常悲伤",
+                        text: "您要效仿知世郎？",
+                        context: "他非常难过地说道：",
+                        emotion: "非常悲伤",
+                        files: {
+                            cosy2_1_5b: "sad.wav",
+                            cosyvoice2_base: "sad.wav"
+                        }
+                    },
+                    fear: {
+                        name: "非常恐惧",
+                        text: "您要效仿知世郎？",
+                        context: "他非常恐惧地说道：",
+                        emotion: "非常恐惧",
+                        files: {
+                            cosy2_1_5b: "fear.wav",
+                            cosyvoice2_base: "fear.wav"
+                        }
+                    },
+                    admire: {
+                        name: "非常欣赏",
+                        text: "您要效仿知世郎？",
+                        context: "他非常欣赏地说道：",
+                        emotion: "非常欣赏",
+                        files: {
+                            cosy2_1_5b: "admire.wav",
+                            cosyvoice2_base: "admire.wav"
+                        }
+                    },
+                    alert: {
+                        name: "非常警惕",
+                        text: "您要效仿知世郎？",
+                        context: "他非常警惕地说道：",
+                        emotion: "非常警惕",
+                        files: {
+                            cosy2_1_5b: "alert.wav",
+                            cosyvoice2_base: "alert.wav"
+                        }
+                    },
+                    disgust: {
+                        name: "非常厌恶",
+                        text: "您要效仿知世郎？",
+                        context: "他非常厌恶地说道：",
+                        emotion: "非常厌恶",
+                        files: {
+                            cosy2_1_5b: "disgust.wav",
+                            cosyvoice2_base: "disgust.wav"
+                        }
+                    },
+                    neutral: {
+                        name: "非常平静",
+                        text: "您要效仿知世郎？",
+                        context: "他非常平静地说道：",
+                        emotion: "非常平静",
+                        files: {
+                            cosy2_1_5b: "neutral.wav",
+                            cosyvoice2_base: "neutral.wav"
+                        }
+                    },
+                    surprise: {
+                        name: "非常惊讶",
+                        text: "您要效仿知世郎？",
+                        context: "他非常惊讶地说道：",
+                        emotion: "非常惊讶",
+                        files: {
+                            cosy2_1_5b: "surprise.wav",
+                            cosyvoice2_base: "surprise.wav"
+                        }
+                    }
+                },
+                mixedEmotions: {
+                    mix1: {
+                        name: "混合情感1",
+                        text: "不用心做课业，还沟通阴阳，师父能有那个活吗？",
+                        context: "他非常气愤地大声说道：",
+                        emotion: "比较愤怒，带一些厌恶，音量高，中音",
+                        files: {
+                            cosy2_1_5b: "emo_mix_05--0342_minimax_voice_albert_1--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_05--0342_minimax_voice_albert_1--output_wav.wav"
+                        }
+                    },
+                    mix2: {
+                        name: "混合情感2",
+                        text: "师父，眼下四海皆沸，没了清平世界，须知汉灵帝时，大贤良师创太平教，建三十六方义战天下。",
+                        context: "他气愤地大声说道：",
+                        emotion: "比较愤怒，带一些害怕，音量高，语速较快",
+                        files: {
+                            cosy2_1_5b: "emo_mix_20--0342_minimax_voice_albert_1--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_20--0342_minimax_voice_albert_1--output_wav.wav"
+                        }
+                    },
+                    mix3: {
+                        name: "混合情感3",
+                        text: "有史为鉴，如今正值朝堂兴兵剿贼，咱们再持太平道这一名号，恐怕...",
+                        context: "他害怕地说道：",
+                        emotion: "比较害怕，带一些警惕，音量适中，语速较慢",
+                        files: {
+                            cosy2_1_5b: "emo_mix_21--0342_minimax_voice_albert_1--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_21--0342_minimax_voice_albert_1--output_wav.wav"
+                        }
+                    },
+                    mix4: {
+                        name: "混合情感4",
+                        text: "恐怕张须陀就要从长白山打到咱们夫子山下。",
+                        context: "他害怕地说道：",
+                        emotion: "比较害怕，带一些警惕，音量适中，低音",
+                        files: {
+                            cosy2_1_5b: "emo_mix_22--0342_minimax_voice_albert_1--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_22--0342_minimax_voice_albert_1--output_wav.wav"
+                        }
+                    }
+                }
+            },
+            barbara: {
+                name: "Barbara",
+                description: "女性角色，声音优雅",
+                prompt: "0381_minimax_voice_barbara_1-prompt_wav.wav",
+                instructionEmotions: {
+                    happy: {
+                        name: "非常高兴",
+                        text: "这是有心事",
+                        context: "她非常兴奋地说道：",
+                        emotion: "非常高兴",
+                        files: {
+                            cosy2_1_5b: "happy.wav",
+                            cosyvoice2_base: "happy.wav"
+                        }
+                    },
+                    angry: {
+                        name: "非常愤怒",
+                        text: "这是有心事",
+                        context: "她非常气愤地大声说道：",
+                        emotion: "非常愤怒",
+                        files: {
+                            cosy2_1_5b: "angry.wav",
+                            cosyvoice2_base: "angry.wav"
+                        }
+                    },
+                    sad: {
+                        name: "非常悲伤",
+                        text: "这是有心事",
+                        context: "她非常难过地说道：",
+                        emotion: "非常悲伤",
+                        files: {
+                            cosy2_1_5b: "sad.wav",
+                            cosyvoice2_base: "sad.wav"
+                        }
+                    },
+                    fear: {
+                        name: "非常恐惧",
+                        text: "这是有心事",
+                        context: "她非常恐惧地说道：",
+                        emotion: "非常恐惧",
+                        files: {
+                            cosy2_1_5b: "fear.wav",
+                            cosyvoice2_base: "fear.wav"
+                        }
+                    },
+                    admire: {
+                        name: "非常欣赏",
+                        text: "这是有心事",
+                        context: "她非常欣赏地说道：",
+                        emotion: "非常欣赏",
+                        files: {
+                            cosy2_1_5b: "admire.wav",
+                            cosyvoice2_base: "admire.wav"
+                        }
+                    },
+                    alert: {
+                        name: "非常警惕",
+                        text: "这是有心事",
+                        context: "她非常警惕地说道：",
+                        emotion: "非常警惕",
+                        files: {
+                            cosy2_1_5b: "alert.wav",
+                            cosyvoice2_base: "alert.wav"
+                        }
+                    },
+                    disgust: {
+                        name: "非常厌恶",
+                        text: "这是有心事",
+                        context: "她非常厌恶地说道：",
+                        emotion: "非常厌恶",
+                        files: {
+                            cosy2_1_5b: "disgust.wav",
+                            cosyvoice2_base: "disgust.wav"
+                        }
+                    },
+                    neutral: {
+                        name: "非常平静",
+                        text: "这是有心事",
+                        context: "她非常平静地说道：",
+                        emotion: "非常平静",
+                        files: {
+                            cosy2_1_5b: "neutral.wav",
+                            cosyvoice2_base: "neutral.wav"
+                        }
+                    },
+                    surprise: {
+                        name: "非常惊讶",
+                        text: "这是有心事",
+                        context: "她非常惊讶地说道：",
+                        emotion: "非常惊讶",
+                        files: {
+                            cosy2_1_5b: "surprise.wav",
+                            cosyvoice2_base: "surprise.wav"
+                        }
+                    }
+                },
+                mixedEmotions: {
+                    mix1: {
+                        name: "混合情感1",
+                        text: "江湖上精通巫术的灵媒婆子可不少，比如巴蜀合一派的通天神姥，她就能沟通阴阳。",
+                        context: "她钦佩地说道：",
+                        emotion: "语气平稳，带一些警惕、一些钦佩，音量适中",
+                        files: {
+                            cosy2_1_5b: "emo_mix_06--0381_minimax_voice_barbara_1--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_06--0381_minimax_voice_barbara_1--output_wav.wav"
+                        }
+                    },
+                    mix2: {
+                        name: "混合情感2",
+                        text: "夏姝，你说是不是？",
+                        context: "她疑惑地说道：",
+                        emotion: "比较惊讶，带一些警惕，音量适中",
+                        files: {
+                            cosy2_1_5b: "emo_mix_07--0381_minimax_voice_barbara_1--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_07--0381_minimax_voice_barbara_1--output_wav.wav"
+                        }
+                    },
+                    mix3: {
+                        name: "混合情感3",
+                        text: "是。但通天神姥乃是合一派前辈高人，你用灵媒婆子称呼太过不敬。",
+                        context: "她气愤地大声说道：",
+                        emotion: "比较害怕，带一些愤怒，音量适中，中高音",
+                        files: {
+                            cosy2_1_5b: "emo_mix_08--0381_minimax_voice_barbara_1--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_08--0381_minimax_voice_barbara_1--output_wav.wav"
+                        }
+                    },
+                    mix4: {
+                        name: "混合情感4",
+                        text: "方才师兄所念，可是新作？",
+                        context: "她疑惑地说道：",
+                        emotion: "比较惊讶，带一些钦佩，音量适中",
+                        files: {
+                            cosy2_1_5b: "emo_mix_15--0381_minimax_voice_barbara_1--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_15--0381_minimax_voice_barbara_1--output_wav.wav"
+                        }
+                    }
+                }
+            },
+            /*jichangming: {
+                name: "季昌明",
+                description: "中文角色，声音成熟",
+                prompt: "33612_季昌明_73158.wav",
+                instructionEmotions: {
+                    angry: {
+                        name: "愤怒",
+                        text: "不是为师，而是你。",
+                        context: "他非常气愤地大声说道：",
+                        emotion: "非常愤怒",
+                        files: {
+                            cosy2_1_5b: "angry_low_02--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "angry_low_02--33612_季昌明_73158--output_wav.wav"
+                        }
+                    },
+                    angry2: {
+                        name: "愤怒2",
+                        text: "你先前中毒深入肺腑，本是必死无疑。",
+                        context: "他非常气愤地大声说道：",
+                        emotion: "非常愤怒",
+                        files: {
+                            cosy2_1_5b: "angry_low_03--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "angry_low_03--33612_季昌明_73158--output_wav.wav"
+                        }
+                    },
+                    happy: {
+                        name: "开心",
+                        text: "为师创太平道场并非效仿大贤良师，实有道统传承。",
+                        context: "他非常兴奋地说道：",
+                        emotion: "非常高兴",
+                        files: {
+                            cosy2_1_5b: "happy_low_02--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "happy_low_02--33612_季昌明_73158--output_wav.wav"
+                        }
+                    },
+                    happy2: {
+                        name: "开心2",
+                        text: "想学吗？",
+                        context: "他非常兴奋地说道：",
+                        emotion: "非常高兴",
+                        files: {
+                            cosy2_1_5b: "happy_low_05--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "happy_low_05--33612_季昌明_73158--output_wav.wav"
+                        }
+                    },
+                    sad: {
+                        name: "悲伤",
+                        text: "为师创太平道场并非效仿大贤良师，实有道统传承。",
+                        context: "他非常难过地说道：",
+                        emotion: "非常悲伤",
+                        files: {
+                            cosy2_1_5b: "sad_low_03--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "sad_low_03--33612_季昌明_73158--output_wav.wav"
+                        }
+                    },
+                    sad2: {
+                        name: "悲伤2",
+                        text: "加之你是我太平教弟子，逢经乱世，岂非天之定数？",
+                        context: "他非常难过地说道：",
+                        emotion: "非常悲伤",
+                        files: {
+                            cosy2_1_5b: "sad_low_05--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "sad_low_05--33612_季昌明_73158--output_wav.wav"
+                        }
+                    },
+                    fear: {
+                        name: "恐惧",
+                        text: "加之你是我太平教弟子，逢经乱世，岂非天之定数？",
+                        context: "他非常恐惧地说道：",
+                        emotion: "非常害怕",
+                        files: {
+                            cosy2_1_5b: "fear_low_04--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "fear_low_04--33612_季昌明_73158--output_wav.wav"
+                        }
+                    },
+                    fear2: {
+                        name: "恐惧2",
+                        text: "苍天已死，黄天当立，岁在甲子，天下大吉。",
+                        context: "他非常恐惧地说道：",
+                        emotion: "非常害怕",
+                        files: {
+                            cosy2_1_5b: "fear_low_06--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "fear_low_06--33612_季昌明_73158--output_wav.wav"
+                        }
+                    }
+                },
+                mixedEmotions: {
+                    mix1: {
+                        name: "混合情感1",
+                        text: "看守道坛，侍奉香客去吧。",
+                        context: "他平静地说道：",
+                        emotion: "语气平稳，带一些高兴、一些警惕，音量适中，语速较慢",
+                        files: {
+                            cosy2_1_5b: "emo_mix_18--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_18--33612_季昌明_73158--output_wav.wav"
+                        }
+                    },
+                    mix2: {
+                        name: "混合情感2",
+                        text: "时也命也。",
+                        context: "他难过地说道：",
+                        emotion: "比较悲伤，带一些愤怒，音量适中，语速较慢",
+                        files: {
+                            cosy2_1_5b: "emo_mix_24--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_24--33612_季昌明_73158--output_wav.wav"
+                        }
+                    },
+                    mix3: {
+                        name: "混合情感3",
+                        text: "你先前中毒深入肺腑，本是必死无疑。没成想由死转生，实乃奇迹。",
+                        context: "他惊讶地说道：",
+                        emotion: "比较惊讶，带一些钦佩，音量适中，语速较快",
+                        files: {
+                            cosy2_1_5b: "emo_mix_29--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_29--33612_季昌明_73158--output_wav.wav"
+                        }
+                    },
+                    mix4: {
+                        name: "混合情感4",
+                        text: "本教治病救人以符水掩饰，病患所饮之药，皆出自太平丹方，为师得此丹方，苦心钻研，有了一身医术，感念授业恩德，这才立教。",
+                        context: "他自豪地说道：",
+                        emotion: "比较钦佩，带一些高兴，音量适中，高音",
+                        files: {
+                            cosy2_1_5b: "emo_mix_32--33612_季昌明_73158--output_wav.wav",
+                            cosyvoice2_base: "emo_mix_32--33612_季昌明_73158--output_wav.wav"
+                        }
+                    }
+                }
+            }
+            */
+            };
+
+        // 生成情感控制演示内容
+        function generateEmotionControlDemo() {
+            const container = document.getElementById('emotion-control-demo');
+            if (!container) {
+                console.error('Emotion control demo container not found');
+                return;
+            }
+            console.log('Emotion control demo container found, generating content...');
+
+            // 按指定顺序显示角色：albert > barbara > jichangming
+            const characterOrder = ['albert', 'barbara', 'jichangming'];
+            
+            characterOrder.forEach(characterKey => {
+                const character = emotionControlData[characterKey];
+                console.log(`Generating emotion control demo for character: ${characterKey}`);
+                
+                // 创建角色情感控制部分
+                const characterSection = document.createElement('div');
+                characterSection.className = 'character-section';
+                characterSection.innerHTML = `
+                    <h3>${character.name}</h3>
+                    <p class="character-description">${character.description}</p>
+                    <div class="prompt-section">
+                        <div class="prompt-label">角色Prompt：</div>
+                        <audio controls class="audio-controls" preload="none" id="prompt-${characterKey}-emotion-audio">
+                            <source src="audios/instruction/prompt/${character.prompt}" type="audio/wav">
+                        </audio>
+                    </div>
+                `;
+                
+                // 创建指令情感表格
+                const instructionTable = document.createElement('table');
+                instructionTable.className = 'character-comparison-table';
+                instructionTable.innerHTML = `
+                    <thead>
+                        <tr class="table-header">
+                            <th class="text-header">指令情感文本</th>
+                            <th class="system-header">🎭 Takin-context (Proposed)</th>
+                            <th class="system-header">🎭 CosyVoice2-Base</th>
+                        </tr>
+                    </thead>
+                    <tbody id="instruction-${characterKey}-tbody">
+                    </tbody>
+                `;
+                
+                // 为每个指令情感创建行
+                Object.keys(character.instructionEmotions).forEach(emotionKey => {
+                    const emotion = character.instructionEmotions[emotionKey];
+                    const tbody = instructionTable.querySelector(`#instruction-${characterKey}-tbody`);
+                    const row = document.createElement('tr');
+                    row.className = `demo-row ${characterKey}`;
+                    row.innerHTML = `
+                        <td class="text-cell">
+                            <div class="context-line">
+                                <span class="context-label">Description：</span>
+                                <span class="context-content">${emotion.context}</span>
+                            </div>
+                            <div class="context-line current-text">
+                                <span class="context-label">${character.name}：</span>
+                                <span class="context-content">${emotion.text}</span>
+                                <span class="emotion-tag">${emotion.emotion}</span>
+                            </div>
+                        </td>
+                        <td class="system-cell cosyvoice">
+                            <audio controls class="audio-controls" preload="none" id="takin-context-${characterKey}-${emotionKey}-instruction-audio">
+                                <source src="audios/instruction/${characterKey}/cosy2-1.5b-xvector/${emotion.files.cosy2_1_5b}" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td class="system-cell cosyvoice">
+                            <audio controls class="audio-controls" preload="none" id="cosyvoice2-base-${characterKey}-${emotionKey}-instruction-audio">
+                                <source src="audios/instruction/${characterKey}/cosyvoice2-base/${emotion.files.cosyvoice2_base}" type="audio/wav">
+                            </audio>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+                
+                // 创建混合情感表格
+                const mixedTable = document.createElement('table');
+                mixedTable.className = 'character-comparison-table';
+                mixedTable.innerHTML = `
+                    <thead>
+                        <tr class="table-header">
+                            <th class="text-header">混合情感文本</th>
+                            <th class="system-header">🎭 Takin-context (Proposed)</th>
+                            <th class="system-header">🎭 CosyVoice2-Base</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mixed-${characterKey}-tbody">
+                    </tbody>
+                `;
+                
+                // 为每个混合情感创建行
+                Object.keys(character.mixedEmotions).forEach(emotionKey => {
+                    const emotion = character.mixedEmotions[emotionKey];
+                    const tbody = mixedTable.querySelector(`#mixed-${characterKey}-tbody`);
+                    const row = document.createElement('tr');
+                    row.className = `demo-row ${characterKey}`;
+                    row.innerHTML = `
+                        <td class="text-cell">
+                            <div class="context-line">
+                                <span class="context-label">Description：</span>
+                                <span class="context-content">${emotion.context}</span>
+                            </div>
+                            <div class="context-line current-text">
+                                <span class="context-label">${character.name}：</span>
+                                <span class="context-content">${emotion.text}</span>
+                                <span class="emotion-tag">${emotion.emotion}</span>
+                            </div>
+                        </td>
+                        <td class="system-cell cosyvoice">
+                            <audio controls class="audio-controls" preload="none" id="takin-context-${characterKey}-${emotionKey}-mixed-audio">
+                                <source src="audios/mixed/${characterKey}/cosy2-1.5b-xvector/${emotion.files.cosy2_1_5b}" type="audio/wav">
+                            </audio>
+                        </td>
+                        <td class="system-cell cosyvoice">
+                            <audio controls class="audio-controls" preload="none" id="cosyvoice2-base-${characterKey}-${emotionKey}-mixed-audio">
+                                <source src="audios/mixed/${characterKey}/cosyvoice2-base/${emotion.files.cosyvoice2_base}" type="audio/wav">
+                            </audio>
+                        </td>
+                    `;
+                    tbody.appendChild(row);
+                });
+                
+                // 添加指令情感部分
+                const instructionSection = document.createElement('div');
+                instructionSection.className = 'comparison-section';
+                instructionSection.innerHTML = '<h3>指令情感控制</h3>';
+                instructionSection.appendChild(instructionTable);
+                characterSection.appendChild(instructionSection);
+                
+                // 添加混合情感部分
+                const mixedSection = document.createElement('div');
+                mixedSection.className = 'comparison-section';
+                mixedSection.innerHTML = '<h3>混合情感控制</h3>';
+                mixedSection.appendChild(mixedTable);
+                characterSection.appendChild(mixedSection);
+                
+                container.appendChild(characterSection);
+            });
+        }
+
         // 生成角色对比内容
         function generateCharacterComparison() {
             const container = document.getElementById('character-comparison');
@@ -1690,6 +2127,10 @@
             // 生成角色对比内容
             generateCharacterComparison();
             console.log('Character comparison generated');
+            
+            // 生成情感控制演示内容
+            generateEmotionControlDemo();
+            console.log('Emotion control demo generated');
         });
     </script>
 
