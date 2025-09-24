@@ -12,7 +12,7 @@ import requests
 
 logging.basicConfig(format='[%(filename)s] [%(asctime)s] [%(levelname)s] %(message)s', level=logging.INFO, stream=sys.stderr)
 log = logging.getLogger(__name__)
-Token: str = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjIwMzUwMzkyMTQsImlhdCI6MTcxOTY3OTIxNCwic3ViIjoibG10dHNfdHJhaW4ifQ.jB-KzN7xttqPM4e62Cr0uXsi-0AbhwOLGu8XW6Vt9Eo"
+
 HAS_ADDR: str = "https://audio-ai.ximalaya.com"
 
 
